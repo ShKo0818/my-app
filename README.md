@@ -1,4 +1,5 @@
 
+![image](https://github.com/ShKo0818/my-app/blob/master/image/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-04-15%20210108.png)
 
 # 営業顧客管理システム（仮）
 
