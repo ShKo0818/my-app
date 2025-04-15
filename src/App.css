@@ -13,6 +13,20 @@
   }
 }
 
+/* サイドバーが画面いっぱいに広がるように */
+.sidebar {
+  min-height: 100vh;  /* サイドバーの高さを画面いっぱいに */
+  padding-top: 1rem;  /* 上部の余白 */
+  padding-bottom: 1rem;  /* 下部の余白 */
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
