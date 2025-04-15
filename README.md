@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# 営業顧客管理システム（仮）
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+シンプルな顧客管理システムのフロントエンド実装をいたしました。
+このアプリケーションをはログイン機能と顧客情報閲覧、登録、更新、削除機能を提供します
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## 目次
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [機能概要](#機能概要)
+- [セットアップ手順](#セットアップ手順)
+- [使用した技術・ライブラリ](#使用した技術ライブラリ)
+- [実装した機能の説明](#実装した機能の説明)
+- [動作確認方法](#動作確認方法)
+- [フォルダ構成](#フォルダ構成)
+- [今後の改善点](#今後の改善点)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 機能概要
 
-### `npm test`
+このアプリケーションは以下の主要機能を提供します：
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- シンプルなログイン画面
+- 顧客情報の一覧表示
+- 顧客情報の検索機能
+- 顧客データの並び替え機能
+- レスポンシブデザイン対応
 
-### `npm run build`
+## セットアップ手順
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+以下の手順でアプリケーションをローカル環境で実行できます。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 前提条件
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v14.0.0 以上)
+- npm (v6.0.0 以上)
 
-### `npm run eject`
+### インストール
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. リポジトリをクローンします
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/yourusername/simple-crm.git
+cd simple-crm
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. 依存パッケージをインストールします
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+3. アプリケーションを起動します
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. ブラウザで以下のURLにアクセスします
 
-### Code Splitting
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 使用した技術・ライブラリ
 
-### Analyzing the Bundle Size
+- **フレームワーク**: React (Create React App)
+- **UI ライブラリ**: Material-UI
+- **状態管理**: React Context API
+- **スタイリング**: Styled Components
+- **フォーム管理**: React Hook Form
+- **データ処理**: Lodash
+- **開発ツール**: ESLint, Prettier
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 実装した機能の説明
 
-### Making a Progressive Web App
+### 1. ログイン機能
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ユーザーID・パスワード入力フォーム
+- 入力バリデーション（空欄チェック）
+- エラーメッセージ表示
+- ログイン状態の保持（Context APIで管理）
 
-### Advanced Configuration
+### 2. 顧客一覧画面
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- 顧客情報の表形式での表示
+  - 顧客名
+  - メールアドレス
+  - 電話番号
+  - 登録日
+  - ステータス
+- **検索機能**
+  - 顧客名による絞り込み検索
+  - リアルタイム検索結果表示
+- **並び替え機能**
+  - 名前順（昇順・降順）
+  - 登録日順（昇順・降順）
+- **レスポンシブ対応**
+  - スマートフォン向けの最適化表示
+  - カード形式の顧客情報表示（モバイル）
 
-### Deployment
+### 3. デザイン
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Material-UIを使用した一貫性のあるデザイン
+- ライトモード/ダークモード切替対応
+- アクセシビリティに配慮したUI設計
 
-### `npm run build` fails to minify
+## 動作確認方法
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ログイン画面
+
+1. アプリケーションを起動すると、最初にログイン画面が表示されます
+2. テスト用アカウントでログインできます：
+   - ユーザーID: `admin`
+   - パスワード: `password`
+3. 入力欄を空にしてログインボタンを押すと、エラーメッセージが表示されます
+
+### 顧客一覧画面
+
+1. ログイン後、自動的に顧客一覧画面に遷移します
+2. 画面上部の検索バーに顧客名を入力して、顧客を検索できます
+3. カラムヘッダーをクリックすると、そのカラムでデータを並び替えることができます
+4. 画面右上のアイコンからダークモードに切り替えることができます
+5. ブラウザの幅を狭めると、レスポンシブ対応された表示に自動的に切り替わります
+
+## フォルダ構成
+
+```
+src/
+├── components/        # 再利用可能なUIコンポーネント
+│   ├── Login/         # ログイン関連コンポーネント
+│   ├── CustomerList/  # 顧客一覧関連コンポーネント
+│   └── UI/            # 汎用UIコンポーネント
+├── context/           # React Context定義
+├── hooks/             # カスタムHooks
+├── data/              # モックデータ
+├── utils/             # ユーティリティ関数
+├── pages/             # ページコンポーネント
+├── styles/            # グローバルスタイル
+└── App.js             # アプリケーションのルート
+```
+
+## 今後の改善点
+
+- 顧客詳細画面の実装
+- フィルタリング機能の拡張
+- 顧客データの追加・編集・削除機能
+- バックエンドとの連携（API実装）
+- ユニットテストの追加
